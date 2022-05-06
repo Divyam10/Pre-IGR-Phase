@@ -12,7 +12,7 @@ def gradient(inputs, outputs):
         grad_outputs=d_points,
         create_graph=True,
         retain_graph=True,
-        only_inputs=True)[0][:, -3:]
+        only_inputs=True, allow_unused = True)[0][:, -3:]
     return points_grad
 
 
